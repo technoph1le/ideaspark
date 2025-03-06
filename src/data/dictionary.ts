@@ -1,3 +1,4 @@
+// Words inspired by ChatGPT xD
 const dictionary = [
   // Web & Frontend
   "Portfolio",

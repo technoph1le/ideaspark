@@ -16,7 +16,7 @@
 
 As a developer, I struggle with coming up with new and, often times, *good* project ideas. Over 3+ years of coding, these experiences taught me a lot. 
 
-I’ve broken down everything I learned for coming up with good project ideas into three simple plans: `A`, `B`, and `C`. You can watch the first 2 in [this video](), and the C plan is this project.
+I’ve broken down everything I learned for coming up with good project ideas into 3 simple plans: `A`, `B`, and `C`. You can watch the first 2 in [this video](https://www.youtube.com/@technoph1le), and the `C` plan (pure randomness) is this project.
 
 ## How it works
 
@@ -32,4 +32,4 @@ If you want to contribute to this project, feel free to do so. You can help expa
 
 ## License
 
-QuickSnip is licensed under the [MIT License](/LICENSE). Feel free to use and share it as you like.
+IdeaSpark is licensed under the [MIT License](/LICENSE). Feel free to use and share it as you like.
