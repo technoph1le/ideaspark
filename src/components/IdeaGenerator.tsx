@@ -3,20 +3,14 @@ import Button from "./Button";
 import ToggleSwitch from "./ToggleSwitch";
 import dictionary from "../data/dictionary";
 
-// const dictionary = [
-//   "Real-time Collaboration Tool",
-//   "Git Commit Message Generator Message Generator",
-// ];
-
 const IdeaGenerator = () => {
   const [isSingleMode, setSingleMode] = useState<boolean>(true);
-  const [generatedWrods, setGeneratedWords] = useState<string[]>([]);
+  const [generatedWords, setGeneratedWords] = useState<string[]>([]);
 
   const getRandomWord = () =>
     dictionary[Math.floor(Math.random() * dictionary.length)];
 
   const generateIdea = () => {
-    console.log(dictionary.length);
     if (isSingleMode) {
       setGeneratedWords([getRandomWord()]);
     } else {
@@ -31,50 +25,43 @@ const IdeaGenerator = () => {
     }
   };
 
-  //
   useEffect(() => {
     const handleKeydown = (e: KeyboardEvent) => {
-      if (e.key === " ") {
-        generateIdea(); // Trigger generateIdea() with spacebar
-      }
-
       if (e.key === "ArrowLeft") {
         setSingleMode(true); // Switch to Single Mode
       } else if (e.key === "ArrowRight") {
         setSingleMode(false); // Switch to Combo Mode
       }
+
+      if (e.key === "g") {
+        generateIdea();
+      }
     };
 
     window.addEventListener("keydown", handleKeydown);
 
+    generateIdea();
+
     return () => {
       window.removeEventListener("keydown", handleKeydown);
     };
-  }, []);
-
-  // Trigger generateIdea() when switching modes and when page is loaded
-  useEffect(() => {
-    generateIdea();
-  }, [isSingleMode]);
+  }, [, isSingleMode]);
 
   return (
     <section className="idea-generator">
       <ToggleSwitch isSingleMode={isSingleMode} setSingleMode={setSingleMode} />
       <div className="words">
         {isSingleMode ? (
-          <div className="word">{generatedWrods[0]}</div>
+          <div className="word">{generatedWords[0]}</div>
         ) : (
           <>
-            <div className="word">{generatedWrods[0]}</div>
+            <div className="word">{generatedWords[0]}</div>
             <div className="word--plus">+</div>
-            <div className="word">{generatedWrods[1]}</div>
+            <div className="word">{generatedWords[1]}</div>
           </>
         )}
       </div>
-      <Button
-        onClick={generateIdea}
-        title="Press 'Spacebar' to generate a new idea"
-      >
+      <Button onClick={generateIdea} title="Press 'G' to generate a new idea">
         Generate Idea
       </Button>
     </section>

@@ -24,7 +24,9 @@ I’ve broken down everything I learned for coming up with good project ideas in
 
 - **Combo Mode**: Generate two unique ideas, forming an interesting project idea.
 
-- **Keyboard Shortcuts**: Use the `left` and `right` arrow keys to switch between modes. Press `Spacebar` to generate a new idea.
+- **Keyboard Shortcuts**: Use the `left` and `right` arrow keys to switch between modes. Press `G` to generate a new idea.
+
+> The reason I didn't use `Spacebar` for generating new ideas is because it also got triggered when toggle switch (button) was selected. Since buttons can be triggered with both `Spacebar` and `Enter`, I didn't want to replace `button` with `div` as it would cause inaccessibility issues as well as didn't want to overcomplicate the code. The only quick solution I could think of was to attach it to `G` and call it a day. :) 
 
 ## Contributions
 
