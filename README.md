@@ -1,54 +1,35 @@
-# React + TypeScript + Vite
+# IdeaSpark
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**IdeaSpark** is a tool that helps developers *spark* their next big project idea. Whether you're looking for inspiration or just a fun way to generate ideas, IdeaSpark creates random words (or combinations) to kickstart your creativity.
 
-Currently, two official plugins are available:
+<div>
+<a href="https://www.youtube.com/@technoph1le" target="_blank">
+  <img src="https://img.shields.io/static/v1?label=&message=Watch%20on%20YouTube&labelColor=FFFFFF&color=FF0000&style=for-the-badge&logo=youtube&logoColor=FF0000" alt="Watch on YouTube">
+</a>
+<div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<br>
 
-## Expanding the ESLint configuration
+![Website preview](/public/preview.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Why I built this
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+As a developer, I struggle with coming up with new and, often times, *good* project ideas. Over 3+ years of coding, these experiences taught me a lot. 
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+I’ve broken down everything I learned for coming up with good project ideas into three simple plans: `A`, `B`, and `C`. You can watch the first 2 in [this video](), and the C plan is this project.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## How it works
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **Single Mode**: Generate one random idea from the dictionary.
+
+- **Combo Mode**: Generate two unique ideas, forming an interesting project idea.
+
+- **Keyboard Shortcuts**: Use the `left` and `right` arrow keys to switch between modes. Press `Spacebar` to generate a new idea.
+
+## Contributions
+
+If you want to contribute to this project, feel free to do so. You can help expand the dictionary, fix bugs or add new features. xD
+
+## License
+
+QuickSnip is licensed under the [MIT License](/LICENSE). Feel free to use and share it as you like.
